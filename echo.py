@@ -5,7 +5,7 @@ from twisted.internet import reactor, protocol, endpoints
 class UpperProtocol(protocol.Protocol):
     def connectionMade(self):
         self.factory.amount +=1 
-        self.transport.write("hi, there are %d clients\n" % self.factory.amount)
+        #self.transport.write("hi, there are %d clients\n" % self.factory.amount)
 
     def connectionLost(self, reason):
         self.factory.amount -= 1
